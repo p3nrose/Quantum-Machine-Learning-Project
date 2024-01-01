@@ -1,0 +1,14 @@
+[main]
+# Global PennyLane options.
+# Affects every loaded plugin if applicable
+shots = 1000
+
+[ionq.global]
+# Global options for the IonQ plugin.
+# For more details, see the PennyLane-IonQ documentation:
+# https://docs.pennylane.ai/projects/ionq/en/stable/index.html
+
+    IONQ_API_KEY = "YOUR-ZHAW-KEY"
+
+    [ionq.simulator]
+    # Options for the ionq.simulator device
