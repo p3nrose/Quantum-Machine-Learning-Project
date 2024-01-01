@@ -8,7 +8,30 @@ shots = 1000
 # For more details, see the PennyLane-IonQ documentation:
 # https://docs.pennylane.ai/projects/ionq/en/stable/index.html
 
-    IONQ_API_KEY = "YOUR-ZHAW-KEY"
+    api_key = "YOUR-IONQ-API-KEY"
+
+    # Auftragsname name funktioniert nicht mehr
+    #name = "ZHAW HS23 Quantum Project"
 
     [ionq.simulator]
-    # Options for the ionq.simulator device
+    shots = 100
+
+    [ionq.qpu]
+    # Auswahl des backend funktioniert nicht mehr :(
+    #backend = "aria-2"
+
+[qiskit.global]
+# Global options for the Qiskit plugin.
+# For more details, see the PennyLane-Qiskit documentation
+# https://docs.pennylane.ai/projects/qiskit/en/latest/index.html
+
+    [qiskit.ibmq]
+    ibmqx_token = "YOUR-IBM-Q-API-KEY"
+
+    # hardware backend device
+    backend = "ibmq_algier"
+
+    # pass provider information
+    hub = "ibmq-uptownbasel"
+    group = "zhaw"
+    project = "zhaw-qml"
